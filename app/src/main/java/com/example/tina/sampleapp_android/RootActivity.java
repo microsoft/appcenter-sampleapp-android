@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
@@ -125,5 +126,6 @@ public class RootActivity extends AppCompatActivity {
         public int getCount() {
             // Show 7 total pages.
             return 7;
+        }
     }
 }
