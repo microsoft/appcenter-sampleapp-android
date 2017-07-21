@@ -103,7 +103,7 @@ public class RootActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
                 case 0:
-                    return GeneralActivity.newInstance();
+                    return WelcomeActivity.newInstance();
                 case 1:
                     return BuildActivity.newInstance();
                 case 2:
@@ -117,7 +117,7 @@ public class RootActivity extends AppCompatActivity {
                 case 6:
                     return PushActivity.newInstance();
                 default:
-                    return GeneralActivity.newInstance();
+                    return WelcomeActivity.newInstance();
             }
         }
 
