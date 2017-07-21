@@ -85,6 +85,7 @@ public class RootActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     */
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -135,9 +136,12 @@ public class RootActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
-                case 4: return CrashesActivity.newInstance();
-                case 5: return AnalyticsActivity.newInstance();
-                default: return PlaceholderFragment.newInstance(position +1);
+                case 4:
+                    return CrashesActivity.newInstance();
+                case 5:
+                    return AnalyticsActivity.newInstance();
+                default:
+                    return PlaceholderFragment.newInstance(position + 1);
             }
         }
 
