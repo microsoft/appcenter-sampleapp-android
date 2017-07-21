@@ -22,4 +22,13 @@
         android:layout_alignRight="@+id/button2"
         android:layout_marginBottom="47dp"
         android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="154dp"
+        android:text="Analytics" />
 </RelativeLayout>
