@@ -125,20 +125,5 @@ public class RootActivity extends AppCompatActivity {
         public int getCount() {
             // Show 7 total pages.
             return 7;
-        }
-        /*
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "General";
-                case 1:
-                    return "Build";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
-        }
-        */
     }
 }
