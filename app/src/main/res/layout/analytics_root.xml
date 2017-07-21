@@ -5,29 +5,28 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/customEventButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="112dp"
-        android:text="Button" />
+        android:layout_marginBottom="146dp"
+        android:text="Send a sample event" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/customColorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_marginBottom="47dp"
-        android:text="Button" />
+        android:text="Send event with color property"
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/customEventButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="154dp"
         android:text="Analytics" />

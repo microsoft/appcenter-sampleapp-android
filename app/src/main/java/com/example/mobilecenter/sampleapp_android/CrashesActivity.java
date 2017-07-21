@@ -52,7 +52,6 @@ public class CrashesActivity extends Fragment implements OnClickListener {
                         }
                     }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-
                 }
             });
             return builder.create();
