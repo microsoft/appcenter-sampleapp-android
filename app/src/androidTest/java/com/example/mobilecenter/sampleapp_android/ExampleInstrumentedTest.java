@@ -1,4 +1,4 @@
-package com.example.tina.sampleapp_android;
+package com.example.mobilecenter.sampleapp_android;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
