@@ -12,9 +12,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.Map;
+import java.util.HashMap;
+
+import com.microsoft.azure.mobile.analytics.Analytics;
 
 public class AnalyticsActivity extends Fragment implements OnClickListener {
     private static final String pageName = "Analytics";
+    private static Map<String, String> properties = new HashMap<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,6 +56,7 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
 
     public static class EventDialog extends DialogFragment {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
+            Analytics.trackEvent("Sample event");
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setMessage("Event sent").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
@@ -69,10 +75,16 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
                 public void onClick(DialogInterface dialog, int index) {
                     switch (index) {
                         case 0:
+                            properties.put("Color", "Yellow");
+                            Analytics.trackEvent("Color event", properties);
                             break;
                         case 1:
+                            properties.put("Color", "Blue");
+                            Analytics.trackEvent("Color event", properties);
                             break;
                         case 2:
+                            properties.put("Color", "Red");
+                            Analytics.trackEvent("Color event", properties);
                             break;
                     }
                 }
