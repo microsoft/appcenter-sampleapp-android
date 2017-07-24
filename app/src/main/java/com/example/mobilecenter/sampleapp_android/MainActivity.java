@@ -1,5 +1,6 @@
 package com.example.mobilecenter.sampleapp_android;
 
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.TableLayout;
 
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
@@ -29,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -67,5 +70,7 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             return PAGECOUNT;
         }
+
+
     }
 }
