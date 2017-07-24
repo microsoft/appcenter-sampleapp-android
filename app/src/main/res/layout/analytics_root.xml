@@ -6,21 +6,23 @@
 
     <Button
         android:id="@+id/customEventButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="146dp"
-        android:text="Send a sample event" />
+        android:layout_marginBottom="54dp"
+        android:text="Send a sample event"
+        android:layout_above="@+id/customColorButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/customColorButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
         android:text="Send event with color property"
-        android:layout_marginTop="68dp"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView4"

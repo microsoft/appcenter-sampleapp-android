@@ -14,7 +14,7 @@ import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
 
 
-public class RootActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
