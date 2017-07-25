@@ -11,6 +11,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            storeFile file("android.jks")
+            storePassword "mobilecenter"
+            keyAlias "MCSample"
+            keyPassword "mobilecenter"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
