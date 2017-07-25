@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -36,7 +37,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
-    def mobileCenterSdkVersion = '0.11.1'
+    def mobileCenterSdkVersion = '0.9.0'
     compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
     compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
+    compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
 }
+
+apply plugin: 'com.google.gms.google-services'

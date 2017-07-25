@@ -13,6 +13,7 @@ import android.widget.TableLayout;
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
+import com.microsoft.azure.mobile.push.Push;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         MobileCenter.start(getApplication(), "<APP SECRET HERE>",
-                Analytics.class, Crashes.class);
+                Analytics.class, Crashes.class, Push.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
 
