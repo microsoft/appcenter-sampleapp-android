@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class BuildActivity extends Fragment{
+public class BuildActivity extends Fragment {
     private static final String pageName = "Build";
 
     @Override
@@ -22,5 +22,9 @@ public class BuildActivity extends Fragment{
         BuildActivity fragment = new BuildActivity();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public static CharSequence getPageName() {
+        return pageName;
     }
 }

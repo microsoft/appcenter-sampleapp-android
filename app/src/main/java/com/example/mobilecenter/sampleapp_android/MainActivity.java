@@ -71,6 +71,26 @@ public class MainActivity extends AppCompatActivity {
             return PAGECOUNT;
         }
 
-
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return WelcomeActivity.getPageName();
+                case 1:
+                    return BuildActivity.getPageName();
+                case 2:
+                    return TestActivity.getPageName();
+                case 3:
+                    return DistributeActivity.getPageName();
+                case 4:
+                    return CrashesActivity.getPageName();
+                case 5:
+                    return AnalyticsActivity.getPageName();
+                case 6:
+                    return PushActivity.getPageName();
+                default:
+                    return WelcomeActivity.getPageName();
+            }
+        }
     }
 }
