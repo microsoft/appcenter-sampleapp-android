@@ -1,6 +1,7 @@
 package com.example.mobilecenter.sampleapp_android;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -28,14 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
+        PagerTabStrip titleStrip = (PagerTabStrip) mViewPager.findViewById(R.id.pager_title_strip);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

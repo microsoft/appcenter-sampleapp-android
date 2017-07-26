@@ -61,6 +61,4 @@ public class CrashesActivity extends Fragment implements OnClickListener {
             return builder.create();
         }
     }
-
-
 }
