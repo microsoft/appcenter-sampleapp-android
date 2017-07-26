@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#252525</color>
     <color name="colorAccent">#282828</color>
 
     <color name="colorAnalyticsBackground">#ffc326</color>
@@ -19,4 +19,5 @@
     <color name="colorTestImageBackground">#3192B3</color>
     <color name="colorBuildImageBackground">#0064c3</color>
     <color name="colorWelcomeImageBackground">#CB2E62</color>
+
 </resources>
