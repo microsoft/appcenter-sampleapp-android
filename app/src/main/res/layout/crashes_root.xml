@@ -9,14 +9,14 @@
         android:id="@+id/crashButton"
         android:layout_width="300dp"
         android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="39dp"
         android:backgroundTint="@android:color/white"
         android:text="@string/crashes_crashButton"
         android:textAllCaps="false"
         android:textSize="17sp"
-        android:textStyle="normal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="normal" />
 
     <ImageView
         android:id="@+id/analyticsImageView"
@@ -34,6 +34,9 @@
         android:id="@+id/crashesTextView"
         android:layout_width="300dp"
         android:layout_height="140dp"
+        android:layout_alignLeft="@+id/crashButton"
+        android:layout_alignStart="@+id/crashButton"
+        android:layout_below="@+id/analyticsImageView"
         android:layout_marginTop="26dp"
         android:clickable="false"
         android:contextClickable="false"
@@ -41,11 +44,8 @@
         android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/crashes_description"
-        android:textColor="@android:color/white"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="17sp"
-        android:layout_below="@+id/analyticsImageView"
-        android:layout_alignLeft="@+id/crashButton"
-        android:layout_alignStart="@+id/crashButton" />
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
 
 </RelativeLayout>

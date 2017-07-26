@@ -70,7 +70,6 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
         }
     }
 
-
     public static class ColorDialog extends DialogFragment {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -96,6 +95,5 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
             return builder.create();
         }
     }
-
 }
 
