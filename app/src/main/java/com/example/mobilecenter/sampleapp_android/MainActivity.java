@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        PagerTabStrip titleStrip = (PagerTabStrip) mViewPager.findViewById(R.id.pager_title_strip);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
