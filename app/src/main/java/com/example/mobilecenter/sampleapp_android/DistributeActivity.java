@@ -23,5 +23,9 @@ public class DistributeActivity extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+    public static CharSequence getPageName() {
+        return pageName;
+    }
 }
 

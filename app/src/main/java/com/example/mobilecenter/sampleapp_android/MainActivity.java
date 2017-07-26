@@ -1,5 +1,7 @@
 package com.example.mobilecenter.sampleapp_android;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -7,7 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.TableLayout;
 
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
@@ -27,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        PagerTabStrip titleStrip = (PagerTabStrip) mViewPager.findViewById(R.id.pager_title_strip);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -66,6 +67,28 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return PAGECOUNT;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return WelcomeActivity.getPageName();
+                case 1:
+                    return BuildActivity.getPageName();
+                case 2:
+                    return TestActivity.getPageName();
+                case 3:
+                    return DistributeActivity.getPageName();
+                case 4:
+                    return CrashesActivity.getPageName();
+                case 5:
+                    return AnalyticsActivity.getPageName();
+                case 6:
+                    return PushActivity.getPageName();
+                default:
+                    return WelcomeActivity.getPageName();
+            }
         }
     }
 }

@@ -41,6 +41,10 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
         return fragment;
     }
 
+    public static CharSequence getPageName() {
+        return pageName;
+    }
+
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.customEventButton:
@@ -58,14 +62,13 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             Analytics.trackEvent("Sample event");
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Event sent").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Event sent").setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                 }
             });
             return builder.create();
         }
     }
-
 
     public static class ColorDialog extends DialogFragment {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -92,6 +95,5 @@ public class AnalyticsActivity extends Fragment implements OnClickListener {
             return builder.create();
         }
     }
-
 }
 

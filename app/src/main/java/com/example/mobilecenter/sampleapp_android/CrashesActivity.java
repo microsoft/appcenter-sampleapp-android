@@ -34,6 +34,10 @@ public class CrashesActivity extends Fragment implements OnClickListener {
         return fragment;
     }
 
+    public static CharSequence getPageName() {
+        return pageName;
+    }
+
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.crashButton:
@@ -57,6 +61,4 @@ public class CrashesActivity extends Fragment implements OnClickListener {
             return builder.create();
         }
     }
-
-
 }
