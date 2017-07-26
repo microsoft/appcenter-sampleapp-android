@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorDistributeBackground">
+
+    <ImageView
+        android:id="@+id/distributeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:background="@color/colorDistributeImageBackground"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/distribute"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:text="Distribute"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/distributeTextView"
+        android:layout_width="300dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/distributeImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:cursorVisible="false"
+        android:defaultFocusHighlightEnabled="false"
+        android:fadeScrollbars="false"
+        android:text="@string/distribute_description"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
 </RelativeLayout>
