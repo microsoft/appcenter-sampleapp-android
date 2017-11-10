@@ -1,4 +1,4 @@
-package com.example.mobilecenter.sampleapp_android;
+package com.example.appcenter.sampleapp_android;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -12,10 +12,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import com.microsoft.azure.mobile.analytics.Analytics;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class AnalyticsActivity extends Fragment implements OnClickListener {
     private static final String pageName = "Analytics";

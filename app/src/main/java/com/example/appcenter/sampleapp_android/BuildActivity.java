@@ -1,4 +1,4 @@
-package com.example.mobilecenter.sampleapp_android;
+package com.example.appcenter.sampleapp_android;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,20 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TestActivity extends Fragment {
-    private static final String pageName = "Test";
+public class BuildActivity extends Fragment {
+    private static final String pageName = "Build";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.test_root, container, false);
+                R.layout.build_root, container, false);
         return rootView;
     }
 
-    public static TestActivity newInstance() {
+    public static BuildActivity newInstance() {
         Bundle args = new Bundle();
-        TestActivity fragment = new TestActivity();
+        BuildActivity fragment = new BuildActivity();
         fragment.setArguments(args);
         return fragment;
     }

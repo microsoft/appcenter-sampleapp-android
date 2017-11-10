@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.mobilecenter.sampleapp_android.MainActivity">
+    tools:context="com.example.appcenter.sampleapp_android.MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"

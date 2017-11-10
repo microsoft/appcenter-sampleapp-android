@@ -1,4 +1,4 @@
-package com.example.mobilecenter.sampleapp_android;
+package com.example.appcenter.sampleapp_android;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

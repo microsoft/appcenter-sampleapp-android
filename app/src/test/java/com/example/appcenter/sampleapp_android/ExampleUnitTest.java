@@ -1,4 +1,4 @@
-package com.example.mobilecenter.sampleapp_android;
+package com.example.appcenter.sampleapp_android;
 
 import org.junit.Test;
 
