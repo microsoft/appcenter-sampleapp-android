@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.microsoft.azure.mobile.analytics.Analytics;
+import com.microsoft.appcenter.analytics.Analytics;
 
 import java.util.HashMap;
 import java.util.Map;
