@@ -19,12 +19,6 @@ android {
     }
 }
 
-repositories {
-    maven {
-        url  "https://dl.bintray.com/vsappcenter/appcenter-snapshot"
-    }
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -33,7 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
-    def appCenterSdkVersion = '1.0.0-0+166f65d'
+    def appCenterSdkVersion = '1.0.0'
     compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 }
