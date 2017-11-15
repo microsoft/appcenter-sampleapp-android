@@ -1,19 +1,15 @@
-package com.example.mobilecenter.sampleapp_android;
+package com.example.appcenter.sampleapp_android;
 
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerTabStrip;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.widget.TableLayout;
+import android.support.v7.app.AppCompatActivity;
 
-import com.microsoft.azure.mobile.MobileCenter;
-import com.microsoft.azure.mobile.analytics.Analytics;
-import com.microsoft.azure.mobile.crashes.Crashes;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        MobileCenter.start(getApplication(), "<APP SECRET HERE>",
+        AppCenter.start(getApplication(), "<APP SECRET HERE>",
                 Analytics.class, Crashes.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
