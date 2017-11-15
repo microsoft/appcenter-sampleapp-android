@@ -10,10 +10,10 @@ First navigate to the **Getting Started** tutorial linked below. After following
 ## Contents
 | Tutorial | Description |
 |:-|:-|
-| [Getting Started](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/getting-started) | Set up the app |
-| [Build](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/build) | Build the app |
-| [Test](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/test) | Run automated UI tests on real devices |
-| [Distribute](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/distribute)| Distribute application to a group of users |
-| [Crashes](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/crashes) | Monitor application crashes |
-| [Analytics](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/analytics) | View user analytics |
-| [Push](https://docs.microsoft.com/en-us/mobile-center/quickstarts/android/push) | Send push notifications to your app users |
+| [Getting Started](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/getting-started) | Set up the app |
+| [Build](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/build) | Build the app |
+| [Test](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/test) | Run automated UI tests on real devices |
+| [Distribute](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/distribute)| Distribute application to a group of users |
+| [Crashes](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/crashes) | Monitor application crashes |
+| [Analytics](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/analytics) | View user analytics |
+| [Push](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/push) | Send push notifications to your app users |
