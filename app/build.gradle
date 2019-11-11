@@ -28,7 +28,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
 
-    def appCenterSdkVersion = '2.4.1'
+    def appCenterSdkVersion = '2.5.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 
