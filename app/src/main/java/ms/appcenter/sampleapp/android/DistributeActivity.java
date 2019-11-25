@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 public class DistributeActivity extends Fragment {
-    private static final String pageName = "Distribute";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -16,17 +15,6 @@ public class DistributeActivity extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.distribute_root, container, false);
         return rootView;
-    }
-
-    public static DistributeActivity newInstance() {
-        Bundle args = new Bundle();
-        DistributeActivity fragment = new DistributeActivity();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public static CharSequence getPageName() {
-        return pageName;
     }
 }
 

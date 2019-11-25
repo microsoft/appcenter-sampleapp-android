@@ -1,7 +1,10 @@
 package ms.appcenter.sampleapp.android;
 
 import android.os.Bundle;
+import android.util.Log;
 
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -11,24 +14,48 @@ import androidx.viewpager.widget.ViewPager;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.distribute.Distribute;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-    private final int PAGECOUNT = 7;
+
+    private final Fragment[] views = {
+            new WelcomeActivity(),
+            new BuildActivity(),
+            new TestActivity(),
+            new DistributeActivity(),
+            new CrashesActivity(),
+            new AnalyticsActivity(),
+            new PushActivity()
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppCenter.start(getApplication(), "<APP SECRET HERE>",
-                Analytics.class, Crashes.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
 
+        // Initialize SDK
+        // Use APPCENTER_APP_SECRET environment variable if it exists
+        if (BuildConfig.APPCENTER_APP_SECRET.equals("")) {
+            AppCenter.start(getApplication(), "<APP SECRET HERE>",
+                    Analytics.class, Crashes.class, Distribute.class);
+        } else {
+            AppCenter.start(getApplication(), BuildConfig.APPCENTER_APP_SECRET,
+                    Analytics.class, Crashes.class, Distribute.class);
+        }
+
+
+        if (BuildConfig.DEBUG) {
+            AppCenter.setLogLevel(Log.VERBOSE);
+        }
+
+        // UI Elements
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
     }
 
@@ -38,53 +65,20 @@ public class MainActivity extends AppCompatActivity {
             super(fm);
         }
 
+        @NonNull
         @Override
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return WelcomeActivity.newInstance();
-                case 1:
-                    return BuildActivity.newInstance();
-                case 2:
-                    return TestActivity.newInstance();
-                case 3:
-                    return DistributeActivity.newInstance();
-                case 4:
-                    return CrashesActivity.newInstance();
-                case 5:
-                    return AnalyticsActivity.newInstance();
-                case 6:
-                    return PushActivity.newInstance();
-                default:
-                    return WelcomeActivity.newInstance();
-            }
+        public Fragment getItem(@IntRange(from = 0, to = 6) final int position) {
+            return views[position];
         }
 
         @Override
         public int getCount() {
-            return PAGECOUNT;
+            return views.length;
         }
 
         @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return WelcomeActivity.getPageName();
-                case 1:
-                    return BuildActivity.getPageName();
-                case 2:
-                    return TestActivity.getPageName();
-                case 3:
-                    return DistributeActivity.getPageName();
-                case 4:
-                    return CrashesActivity.getPageName();
-                case 5:
-                    return AnalyticsActivity.getPageName();
-                case 6:
-                    return PushActivity.getPageName();
-                default:
-                    return WelcomeActivity.getPageName();
-            }
+        public CharSequence getPageTitle(@IntRange(from = 0, to = 6) final int position) {
+            return views[position].getClass().getSimpleName().trim().replace("Activity", "");
         }
     }
 }
