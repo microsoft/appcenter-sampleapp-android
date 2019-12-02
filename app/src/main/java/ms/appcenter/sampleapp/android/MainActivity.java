@@ -38,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_root);
 
         // Initialize SDK
-        // Use APPCENTER_APP_SECRET environment variable if it exists
-        if (BuildConfig.APPCENTER_APP_SECRET.equals("")) {
-            AppCenter.start(getApplication(), "<APP SECRET HERE>",
+        if (!BuildConfig.APPCENTER_APP_SECRET.equals("")) {
+            // Use APPCENTER_APP_SECRET environment variable if it exists
+            AppCenter.start(getApplication(), BuildConfig.APPCENTER_APP_SECRET,
                     Analytics.class, Crashes.class, Distribute.class);
         } else {
-            AppCenter.start(getApplication(), BuildConfig.APPCENTER_APP_SECRET,
+            // Otherwise use the hardcoded string value here
+            AppCenter.start(getApplication(), "<APP SECRET HERE>",
                     Analytics.class, Crashes.class, Distribute.class);
         }
 
@@ -78,6 +79,22 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(@IntRange(from = 0, to = 6) final int position) {
+            if (views[position] instanceof WelcomeActivity) {
+                return "Welcome";
+            } else if (views[position] instanceof BuildActivity) {
+                return "Build";
+            } else if (views[position] instanceof TestActivity) {
+                return "Test";
+            } else if (views[position] instanceof DistributeActivity) {
+                return "Distribute";
+            } else if (views[position] instanceof CrashesActivity) {
+                return "Crashes";
+            } else if (views[position] instanceof AnalyticsActivity) {
+                return "Analytics";
+            } else if (views[position] instanceof PushActivity) {
+                return "Push";
+            }
+
             return views[position].getClass().getSimpleName().trim().replace("Activity", "");
         }
     }
