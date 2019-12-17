@@ -45,3 +45,11 @@ captures/
 
 # Google credentials files
 google-services.json*.iml
+
+fastlane/.env
+
+app/release/
+
+fastlane/README.md
+
+fastlane/report.xml

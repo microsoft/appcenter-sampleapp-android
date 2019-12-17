@@ -1,0 +1,4 @@
+package_name("ms.appcenter.sampleapp.android") # e.g. com.krausefx.app
+
+## If you want to configure fastlane to upload to the Google Play Store
+# json_key_file("") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one

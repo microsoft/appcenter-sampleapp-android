@@ -10,7 +10,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
         // Obtain the value of APPCENTER_APP_SECRET environment variable from Build time.
         buildConfigField("String", "APPCENTER_APP_SECRET", "\"\"")
         if (System.getenv("APPCENTER_APP_SECRET") != null) {
@@ -30,7 +29,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
 
