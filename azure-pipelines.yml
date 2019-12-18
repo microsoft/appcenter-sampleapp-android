@@ -4,7 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+pr:
+  - master
 
 pool:
   vmImage: 'macos-latest'
@@ -21,10 +25,11 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleRelease'
+
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk'
     apksignerKeystoreFile: 'sampleapp-android.keystore'
-    apksignerKeystorePassword: 'keystore-password'
-    apksignerKeystoreAlias: 'alias'
-    apksignerKeyPassword: 'key-password'
+    apksignerKeystorePassword: $(keystore-password)
+    apksignerKeystoreAlias: $(alias)
+    apksignerKeyPassword: $(key-password)
