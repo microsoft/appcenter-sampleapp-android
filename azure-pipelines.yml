@@ -33,3 +33,23 @@ steps:
     apksignerKeystorePassword: $(keystore-password)
     apksignerKeystoreAlias: $(alias)
     apksignerKeyPassword: $(key-password)
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'Vyas (v-vynell@microsoft.com) App Center Token'
+    appSlug: 'XTCTeam/appcenter-sampleapp-android'
+    appFile: '**/*.apk'
+    symbolsOption: 'Android'
+    symbolsMappingTxtFile: '**/*mapping.txt'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'Sample Release Notes from Azure Pipelines'
+    destinationType: 'groups'
+- task: AppCenterTest@1
+  inputs:
+    appFile: '**/*.apk'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    frameworkOption: 'espresso'
+    credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'Vyas (v-vynell@microsoft.com) App Center Token'
+    appSlug: 'XTCTeam/appcenter-sampleapp-android'
+    devices: 'XTCTeam/6-dot-0-1-9-dot-0-oneplus-galaxy-s7'
+    localeOption: 'en_US'
