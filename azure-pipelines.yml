@@ -19,11 +19,13 @@ variables:
 steps:
 - task: Gradle@2
   inputs:
-    workingDirectory: ''
+    workingDirectory: $(Build.Repository.LocalPath)
     gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
-    publishJUnitResults: false
+    publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    gradleOptions: '-Xmx3072m'
+    sonarQubeRunAnalysis: true
     tasks: 'clean build test assembleRelease'
 
 - task: AndroidSigning@3
