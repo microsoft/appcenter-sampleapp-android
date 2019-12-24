@@ -8,10 +8,10 @@ The App Center SDK modules are already integrated within the application. Simply
 
 ### Build status (master branch)
 
-| Build Service   | Status                                                                                                                                                                                                                                                               |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| App Center      | [![Build status](https://build.appcenter.ms/v0.1/apps/36bd9b11-9076-42cf-af68-05beeaa070f9/branches/master/badge)](https://appcenter.ms)                                                                                                                             |
-| Azure Pipelines | [![Build Status](https://dev.azure.com/AppCenter-CSS/App%20Center%20-%20CSS/_apis/build/status/microsoft.appcenter-sampleapp-android?branchName=master)](https://dev.azure.com/AppCenter-CSS/App%20Center%20-%20CSS/_build/latest?definitionId=10&branchName=master) |
+| Build Service   | Status                                                                                                                                                                                                                                                           |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| App Center      | [![Build status](https://build.appcenter.ms/v0.1/apps/36bd9b11-9076-42cf-af68-05beeaa070f9/branches/master/badge)](https://appcenter.ms)                                                                                                                         |
+| Azure Pipelines | [![Build Status](https://dev.azure.com/msmobilecenter/Mobile-Center/_apis/build/status/sampleapp/microsoft.appcenter-sampleapp-android?branchName=master)](https://dev.azure.com/msmobilecenter/Mobile-Center/_build/latest?definitionId=3725&branchName=master) |
 
 ## Tutorials
 

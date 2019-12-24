@@ -53,3 +53,7 @@ app/release/
 fastlane/README.md
 
 fastlane/report.xml
+
+.project
+
+.settings/
