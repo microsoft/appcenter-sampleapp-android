@@ -28,12 +28,6 @@ steps:
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      echo 'Hello world'
-      ls $(Build.ArtifactStagingDirectory)
 - task: DownloadSecureFile@1
   inputs:
     secureFile: 'appcenter-sampleapp.keystore'
@@ -46,7 +40,21 @@ steps:
     apksignerKeyPassword: '$(android-key-password)'
 - task: AppCenterTest@1
   inputs:
+    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'appium'
+    frameworkOption: 'espresso'
     credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'App Center Token'
+    appSlug: 'XTCTeam/appcenter-sampleapp-android'
+    devices: 'ef7113b6'
     localeOption: 'en_US'
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'App Center Token'
+    appSlug: 'XTCTeam/appcenter-sampleapp-android'
+    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/*.apk'
+    symbolsOption: 'Android'
+    symbolsMappingTxtFile: '$(Build.SourcesDirectory)/app/build/outputs/mapping/release/mapping.txt'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'Release notes from Azure Pipelines Task'
+    destinationType: 'groups'
