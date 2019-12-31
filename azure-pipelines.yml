@@ -21,7 +21,7 @@ steps:
   inputs:
     gradleWrapperFile: '$(Build.Repository.LocalPath)/gradlew'
     workingDirectory: '$(Build.Repository.LocalPath)'
-    tasks: 'clean build test assembleRelease'
+    tasks: 'clean build test assembleRelease assembleAndroidTest'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
