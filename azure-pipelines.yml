@@ -40,7 +40,7 @@ steps:
     apksignerKeyPassword: '$(android-key-password)'
 - task: AppCenterTest@1
   inputs:
-    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/androidTest/debug/*.apk'
+    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'espresso'
     espressoBuildDirectory: '$(Build.SourcesDirectory)/app/build/outputs/apk/androidTest/debug'
