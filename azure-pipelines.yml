@@ -33,7 +33,7 @@ steps:
     secureFile: 'appcenter-sampleapp.keystore'
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '**/*.apk'
+    apkFiles: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/release.apk'
     apksignerKeystoreFile: 'appcenter-sampleapp.keystore'
     apksignerKeystorePassword: '$(keystore-password)'
     apksignerKeystoreAlias: '$(android-alias)'
