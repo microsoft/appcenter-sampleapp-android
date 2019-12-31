@@ -40,10 +40,10 @@ steps:
     apksignerKeyPassword: '$(android-key-password)'
 - task: AppCenterTest@1
   inputs:
-    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/*.apk'
+    appFile: '$(Build.SourcesDirectory)/app/build/outputs/apk/androidTest/debug/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'espresso'
-    espressoBuildDirectory: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/'
+    espressoBuildDirectory: '$(Build.SourcesDirectory)/app/build/outputs/apk/androidTest/debug'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'App Center Token'
     appSlug: 'XTCTeam/appcenter-sampleapp-android'
