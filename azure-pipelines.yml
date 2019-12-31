@@ -28,12 +28,13 @@ steps:
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
+
 - task: DownloadSecureFile@1
   inputs:
     secureFile: 'appcenter-sampleapp.keystore'
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/release.apk'
+    apkFiles: '$(Build.SourcesDirectory)/app/build/outputs/apk/release/*.apk'
     apksignerKeystoreFile: 'appcenter-sampleapp.keystore'
     apksignerKeystorePassword: '$(keystore-password)'
     apksignerKeystoreAlias: '$(android-alias)'
