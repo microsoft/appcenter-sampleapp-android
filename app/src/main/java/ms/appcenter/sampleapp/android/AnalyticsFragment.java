@@ -17,13 +17,13 @@ import com.microsoft.appcenter.analytics.Analytics;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AnalyticsActivity extends Fragment {
+public class AnalyticsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.analytics_root, container, false);
+                R.layout.analytics_fragment, container, false);
 
         Button eventButton = rootView.findViewById(R.id.customEventButton);
         eventButton.setOnClickListener(view -> {

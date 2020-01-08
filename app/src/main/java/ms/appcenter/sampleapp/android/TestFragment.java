@@ -7,14 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class DistributeActivity extends Fragment {
-
+public class TestFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.distribute_root, container, false);
+                R.layout.test_fragment, container, false);
         return rootView;
     }
 }
-

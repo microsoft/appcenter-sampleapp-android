@@ -19,7 +19,7 @@
     <color name="colorCrashesImageBackground">#6FA22E</color>
     <color name="colorDistributeImageBackground">#38A495</color>
     <color name="colorTestImageBackground">#3192B3</color>
-    <color name="colorBuildImageBackground">#0064c3</color>
+    <color name="colorBuildImageBackground">#0064C3</color>
     <color name="colorWelcomeImageBackground">#CB2E62</color>
 
 </resources>

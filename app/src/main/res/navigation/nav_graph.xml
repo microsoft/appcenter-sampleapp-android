@@ -6,39 +6,39 @@
     app:startDestination="@id/welcomeActivity">
     <fragment
         android:id="@+id/analyticsActivity"
-        android:name="ms.appcenter.sampleapp.android.AnalyticsActivity"
+        android:name="ms.appcenter.sampleapp.android.AnalyticsFragment"
         android:label="analytics_root"
-        tools:layout="@layout/analytics_root" />
+        tools:layout="@layout/analytics_fragment" />
     <fragment
         android:id="@+id/buildActivity"
-        android:name="ms.appcenter.sampleapp.android.BuildActivity"
+        android:name="ms.appcenter.sampleapp.android.BuildFragment"
         android:label="build_root"
-        tools:layout="@layout/build_root" />
+        tools:layout="@layout/build_fragment" />
     <fragment
         android:id="@+id/crashesActivity"
-        android:name="ms.appcenter.sampleapp.android.CrashesActivity"
+        android:name="ms.appcenter.sampleapp.android.DiagnosticsFragment"
         android:label="crashes_root"
-        tools:layout="@layout/crashes_root" />
+        tools:layout="@layout/diagnostics_fragment" />
     <fragment
         android:id="@+id/distributeActivity"
-        android:name="ms.appcenter.sampleapp.android.DistributeActivity"
+        android:name="ms.appcenter.sampleapp.android.DistributeFragment"
         android:label="distribute_root"
-        tools:layout="@layout/distribute_root" />
+        tools:layout="@layout/distribute_fragment" />
     <fragment
         android:id="@+id/pushActivity"
-        android:name="ms.appcenter.sampleapp.android.PushActivity"
+        android:name="ms.appcenter.sampleapp.android.PushFragment"
         android:label="push_root"
-        tools:layout="@layout/push_root" />
+        tools:layout="@layout/push_fragment" />
     <fragment
         android:id="@+id/testActivity"
-        android:name="ms.appcenter.sampleapp.android.TestActivity"
+        android:name="ms.appcenter.sampleapp.android.TestFragment"
         android:label="test_root"
-        tools:layout="@layout/test_root" />
+        tools:layout="@layout/test_fragment" />
     <fragment
         android:id="@+id/welcomeActivity"
-        android:name="ms.appcenter.sampleapp.android.WelcomeActivity"
+        android:name="ms.appcenter.sampleapp.android.WelcomeFragment"
         android:label="welcome_root"
-        tools:layout="@layout/welcome_root" >
+        tools:layout="@layout/welcome_fragment" >
         <action
             android:id="@+id/action_welcomeActivity_to_buildActivity"
             app:destination="@id/buildActivity" />
