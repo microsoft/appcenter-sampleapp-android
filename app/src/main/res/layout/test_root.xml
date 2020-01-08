@@ -17,7 +17,7 @@
         android:adjustViewBounds="true"
         android:background="@color/colorTestImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/test" />
+        app:srcCompat="@drawable/ic_illustration_test" />
 
     <TextView
         android:id="@+id/testTextView"
@@ -27,9 +27,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/test_description"
         android:textAppearance="@style/TextAppearance.AppCompat"

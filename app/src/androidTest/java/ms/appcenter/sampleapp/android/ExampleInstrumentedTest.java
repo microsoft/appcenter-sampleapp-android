@@ -23,7 +23,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
     @Rule
-    public ReportHelper reportHelper = Factory.getReportHelper();
+    public final ReportHelper reportHelper = Factory.getReportHelper();
 
     @After
     public void TearDown() {

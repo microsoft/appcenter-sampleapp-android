@@ -15,7 +15,7 @@
         android:adjustViewBounds="true"
         android:background="@color/colorDistributeImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/distribute" />
+        app:srcCompat="@drawable/ic_illustration_distribute" />
 
     <TextView
         android:id="@+id/distributeTextView"
@@ -25,9 +25,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/distribute_description"
         android:textAppearance="@style/TextAppearance.AppCompat"

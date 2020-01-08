@@ -28,7 +28,7 @@
         android:adjustViewBounds="true"
         android:background="@color/colorCrashesImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/crashes" />
+        app:srcCompat="@drawable/ic_illustration_diagnostics" />
 
     <TextView
         android:id="@+id/crashesTextView"
@@ -39,9 +39,6 @@
         android:layout_below="@+id/analyticsImageView"
         android:layout_marginTop="26dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/crashes_description"
         android:textAppearance="@style/TextAppearance.AppCompat"

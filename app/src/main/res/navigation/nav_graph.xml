@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/welcomeActivity">
+    <fragment
+        android:id="@+id/analyticsActivity"
+        android:name="ms.appcenter.sampleapp.android.AnalyticsActivity"
+        android:label="analytics_root"
+        tools:layout="@layout/analytics_root" />
+    <fragment
+        android:id="@+id/buildActivity"
+        android:name="ms.appcenter.sampleapp.android.BuildActivity"
+        android:label="build_root"
+        tools:layout="@layout/build_root" />
+    <fragment
+        android:id="@+id/crashesActivity"
+        android:name="ms.appcenter.sampleapp.android.CrashesActivity"
+        android:label="crashes_root"
+        tools:layout="@layout/crashes_root" />
+    <fragment
+        android:id="@+id/distributeActivity"
+        android:name="ms.appcenter.sampleapp.android.DistributeActivity"
+        android:label="distribute_root"
+        tools:layout="@layout/distribute_root" />
+    <fragment
+        android:id="@+id/pushActivity"
+        android:name="ms.appcenter.sampleapp.android.PushActivity"
+        android:label="push_root"
+        tools:layout="@layout/push_root" />
+    <fragment
+        android:id="@+id/testActivity"
+        android:name="ms.appcenter.sampleapp.android.TestActivity"
+        android:label="test_root"
+        tools:layout="@layout/test_root" />
+    <fragment
+        android:id="@+id/welcomeActivity"
+        android:name="ms.appcenter.sampleapp.android.WelcomeActivity"
+        android:label="welcome_root"
+        tools:layout="@layout/welcome_root" >
+        <action
+            android:id="@+id/action_welcomeActivity_to_buildActivity"
+            app:destination="@id/buildActivity" />
+        <action
+            android:id="@+id/action_welcomeActivity_to_analyticsActivity"
+            app:destination="@id/analyticsActivity" />
+        <action
+            android:id="@+id/action_welcomeActivity_to_testActivity"
+            app:destination="@id/testActivity" />
+        <action
+            android:id="@+id/action_welcomeActivity_to_distributeActivity"
+            app:destination="@id/distributeActivity" />
+        <action
+            android:id="@+id/action_welcomeActivity_to_crashesActivity"
+            app:destination="@id/crashesActivity" />
+        <action
+            android:id="@+id/action_welcomeActivity_to_pushActivity"
+            app:destination="@id/pushActivity" />
+    </fragment>
+</navigation>

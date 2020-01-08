@@ -42,7 +42,7 @@
         android:adjustViewBounds="true"
         android:background="@color/colorAnalyticsImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/analytics" />
+        app:srcCompat="@drawable/ic_illustration_analytics" />
 
     <TextView
         android:id="@+id/analyticsTextView"
@@ -53,9 +53,6 @@
         android:layout_below="@+id/analyticsImageView"
         android:layout_marginTop="24dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/analytics_description"
         android:textAppearance="@style/TextAppearance.AppCompat"

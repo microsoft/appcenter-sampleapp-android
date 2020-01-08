@@ -15,7 +15,7 @@
         android:adjustViewBounds="true"
         android:background="@color/colorPushImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/push" />
+        app:srcCompat="@drawable/ic_illustration_push" />
 
     <TextView
         android:id="@+id/pushTextView"
@@ -25,9 +25,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/push_description"
         android:textAppearance="@style/TextAppearance.AppCompat"

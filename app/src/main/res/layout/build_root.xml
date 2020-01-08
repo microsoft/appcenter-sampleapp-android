@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBuildBackground">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        android:letterSpacing="-0.01"
+        android:lineSpacingExtra="5sp"
+        android:text="Build"
+        />
     <ImageView
         android:id="@+id/buildImageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:adjustViewBounds="true"
         android:background="@color/colorBuildImageBackground"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/build" />
+        app:srcCompat="@drawable/ic_illustration_build" />
 
     <TextView
         android:id="@+id/buildTextView"
@@ -27,13 +35,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:clickable="false"
-        android:contextClickable="false"
-        android:cursorVisible="false"
-        android:defaultFocusHighlightEnabled="false"
         android:fadeScrollbars="false"
         android:text="@string/build_description"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@android:color/white"
         android:textSize="17sp" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

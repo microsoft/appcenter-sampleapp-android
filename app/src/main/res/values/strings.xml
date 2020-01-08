@@ -7,7 +7,7 @@
     <string name="test_description">"Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS).\n\nBacked by Xamarin Test Cloud."</string>
     <string name="distribute_description">"Users can install the app via email distribution lists for testing, much as they\'d download an app from the app store.\n\nBacked by HockeyApp."</string>
     <string name="crashes_description">"Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them.\n\nBacked by HockeyApp."</string>
-    <string name="welcome_description">"Visual Studio App Center is mission control for apps. It brings together multiple services, commonly used for mobile developers, into a single, integrated product.\n\n\nSwipe right to learn about our services"</string>
+    <string name="welcome_description">"App Center is mission control for apps. It brings together multiple services, commonly used by mobile developers, into a single, integrated product."</string>
 
     <string name="crashes_crashButton">"Send a sample crash"</string>
     <string name="analytics_customEventButton">"Send a sample event"</string>

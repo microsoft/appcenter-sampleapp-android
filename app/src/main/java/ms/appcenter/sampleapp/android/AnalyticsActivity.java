@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -39,6 +40,7 @@ public class AnalyticsActivity extends Fragment {
     }
 
     public static class EventDialog extends DialogFragment {
+        @NonNull
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             Analytics.trackEvent("Sample event");
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -50,6 +52,7 @@ public class AnalyticsActivity extends Fragment {
     }
 
     public static class ColorDialog extends DialogFragment {
+        @NonNull
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             CharSequence[] colors = {"Yellow", "Blue", "Red"};
