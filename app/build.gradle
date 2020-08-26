@@ -39,7 +39,7 @@ dependencies {
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
 
     // Unit Testing
-    testImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'androidx.test.ext:junit:1.1.2'
 
     // Espresso UI Testing
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
