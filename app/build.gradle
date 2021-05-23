@@ -1,4 +1,9 @@
 apply plugin: 'com.android.application'
+dependencies {
+    def appCenterSdkVersion = '4.1.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
 
 android {
     compileSdkVersion 29
@@ -11,9 +16,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Obtain the value of APPCENTER_APP_SECRET environment variable from Build time.
-        buildConfigField("String", "APPCENTER_APP_SECRET", "\"\"")
-        if (System.getenv("APPCENTER_APP_SECRET") != null) {
-            buildConfigField("String", "APPCENTER_APP_SECRET", "\"${System.getenv("APPCENTER_APP_SECRET")}\"")
+        buildConfigField("String", "a5c9f863-ae47-481c-99b0-a1f8d74906cd", "\"\"")
+        if (System.getenv("a5c9f863-ae47-481c-99b0-a1f8d74906cd") != null) {
+            buildConfigField("String", "a5c9f863-ae47-481c-99b0-a1f8d74906cd", "\"${System.getenv("a5c9f863-ae47-481c-99b0-a1f8d74906cd")}\"")
         }
     }
     buildTypes {
