@@ -27,7 +27,6 @@ First navigate to the **Getting Started** tutorial linked below. After following
 | [Distribute](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/distribute)           | Distribute application to a group of users |
 | [Crashes](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/crashes)                 | Monitor application crashes                |
 | [Analytics](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/analytics)             | View user analytics                        |
-| [Push](https://docs.microsoft.com/en-us/appcenter/quickstarts/android/push)                       | Send push notifications to your app users  |
 
 ### Added functionality
 
