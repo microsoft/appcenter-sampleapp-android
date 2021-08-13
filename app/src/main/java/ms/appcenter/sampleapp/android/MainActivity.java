@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
             new PushActivity()
     };
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_root);
+  
+        @Override
+protected void onCreate(Bundle savedInstanceState) {
+        AppCenter.start(getApplication(), "c7f1e2c4-d70e-49cb-9c85-13b0ee3ca0ad",
+                Analytics.class, Crashes.class);
+        
 
         // Initialize SDK
         if (!BuildConfig.APPCENTER_APP_SECRET.equals("")) {
